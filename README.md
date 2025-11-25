@@ -1,13 +1,15 @@
 # Apna Bazaar – Multi-Vendor E-Commerce App
 
+# Projects Partners 
+- Ahmad Hassan FA23-BSCS-005
+- Nasir Ali Khan FA23-BSCS-036
+
 ## Introduction
 Apna Bazaar is a fully functional e-commerce web application designed for both vendors and customers. It allows vendors to manage product listings and customers to browse, filter, and purchase products. This project simulates the end-to-end shopping experience from signup/login to checkout. Built with a clean UI and interactive features, the application demonstrates key front-end development concepts and integrates Firebase Realtime Database for backend services. User authentication and session management are handled using local storage.
 
 ## Project Type
 Frontend
 
-## Deployed App
-Frontend: https://charming-moonbeam-632fe7.netlify.app/
 
 ## Directory Structure
 ```
@@ -39,16 +41,6 @@ Ecommerce Web/
 └── seed_data.json
 ```
 
-<img width="1366" height="768" alt="Screenshot (569)" src="https://github.com/user-attachments/assets/8bb5bead-966a-4f52-bbea-3dcf51a01a48" />
-<img width="1366" height="768" alt="Screenshot (570)" src="https://github.com/user-attachments/assets/0787e34f-e11e-43e0-bd37-89fa1fbe5eb9" />
-<img width="1366" height="768" alt="Screenshot (571)" src="https://github.com/user-attachments/assets/aee6152e-78c0-4253-9af6-8323f1efad9b" />
-
-
-## Video Walkthrough of the project
-[YouTube Link to Project Demo (1-3 mins)](https://drive.google.com/file/d/15FHqQjZ-Jlb4ECNNo9rd-j7byYeW7aUj/view?usp=sharing)
-
-## Video Walkthrough of the codebase
-[YouTube Link to Codebase Explanation (1-5 mins)](https://drive.google.com/file/d/15FHqQjZ-Jlb4ECNNo9rd-j7byYeW7aUj/view?usp=sharing)
 
 ## Features
 - User and Vendor SignUp/Login using local storage
@@ -67,13 +59,7 @@ Ecommerce Web/
 - Role-based navigation: vendors access dashboard, users browse and shop
 - Minimal and user-friendly UI focused on functionality
 
-## Installation & Getting started
-Clone the repository and run using any local live server extension:
-```bash
-git clone <your-repo-url>
-cd Ecommerce_Web
-# Open index.html using Live Server
-```
+
 
 ## Configuration
 To change the Firebase Database URL:
@@ -95,14 +81,16 @@ powershell -ExecutionPolicy Bypass -File seed.ps1
 4. Checkout and fill your details to complete the order
 
 ## Credentials
-Vendor:
+Vendor 1:
 - Name: Nasir Ali
 - Email: nasirali@gmail.com
 - Password: vendor123
 
-User:
-- Email: user@gmail.com
-- Password: user123
+Vendor 2:
+- Name: Ahmad Hassan
+- Email: ahmad.hassan03288@gmail.com
+- Password: vendor123
+
 
 ## APIs Used
 - Firebase Realtime Database
@@ -115,12 +103,8 @@ User:
 - HTML, CSS, JavaScript
 - Firebase Realtime Database
 - Local Storage (for authentication)
-- Netlify (Deployment)
 - GitHub (Version Control)
 
 ## Collaboration & Timeline
-- This project was completed in 4 days.
-- Tools used: GitHub (version control & collaboration), Zoom (video presentation)
+- This project was completed in 6 Weeks by Ahmad Hassan and Nasir Ali.
 
----
-> Built by Sachin Kumanache
