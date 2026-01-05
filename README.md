@@ -4,123 +4,83 @@
 Apna Bazaar is a fully functional e-commerce web application designed for both vendors and customers. It allows vendors to manage product listings and customers to browse, filter, and purchase products. This project simulates the end-to-end shopping experience from signup/login to checkout. Built with a clean UI and interactive features, the application demonstrates key front-end development concepts and integrates Firebase Realtime Database for backend services. User authentication and session management are handled using local storage.
 
 ## Project Type
-Frontend
+Frontend & Backend (Collaboration)
 
 ## Deployed App
 Frontend: https://charming-moonbeam-632fe7.netlify.app/
+
+## Team Members & Contributions
+This project was built collaboratively by:
+
+*   **Ahmad Hassan (AhmadHassanX)** - *Partner A*
+    *   **Role**: Vendor Management & Authentication
+    *   **Features**: User/Vendor Signup & Login, Vendor Dashboard (Add/Edit/Delete Products), Authentication Logic.
+
+*   **Nasir Ali (NasirXAli)** - *Partner B*
+    *   **Role**: Customer Experience & Shopping
+    *   **Features**: Product Cart Management, Checkout Process, Cart UI/UX, Order Summary.
 
 ## Directory Structure
 ```
 Ecommerce Web/
 ├── pages/
-│   ├── cart.html
-│   ├── checkout.html
-│   ├── log.html
-│   ├── signup.html
-│   └── vendersDashboard.html
+│   ├── cart.html          # (Partner B)
+│   ├── checkout.html      # (Partner B)
+│   ├── log.html           # (Partner A)
+│   ├── signup.html        # (Partner A)
+│   └── vendersDashboard.html # (Partner A)
 ├── src/
-│   ├── cart.js
-│   ├── checkout.js
+│   ├── cart.js            # (Partner B)
+│   ├── checkout.js        # (Partner B)
 │   ├── config.js
 │   ├── index.js
-│   ├── log.js
-│   ├── signup.js
-│   └── venders.js
+│   ├── log.js             # (Partner A)
+│   ├── signup.js          # (Partner A)
+│   └── venders.js         # (Partner A)
 ├── style/
-│   ├── cart.css
-│   ├── checkout.css
-│   ├── log.css
-│   ├── signup.css
+│   ├── cart.css           # (Partner B)
+│   ├── checkout.css       # (Partner B)
+│   ├── log.css            # (Partner A)
+│   ├── signup.css         # (Partner A)
 │   ├── style.css
-│   └── vendersDashboard.css
+│   └── vendersDashboard.css # (Partner A)
 ├── index.html
 ├── README.md
 ├── seed.ps1
 └── seed_data.json
 ```
 
-<img width="1366" height="768" alt="Screenshot (569)" src="https://github.com/user-attachments/assets/8bb5bead-966a-4f52-bbea-3dcf51a01a48" />
-<img width="1366" height="768" alt="Screenshot (570)" src="https://github.com/user-attachments/assets/0787e34f-e11e-43e0-bd37-89fa1fbe5eb9" />
-<img width="1366" height="768" alt="Screenshot (571)" src="https://github.com/user-attachments/assets/aee6152e-78c0-4253-9af6-8323f1efad9b" />
-
-
-## Video Walkthrough of the project
-[YouTube Link to Project Demo (1-3 mins)](https://drive.google.com/file/d/15FHqQjZ-Jlb4ECNNo9rd-j7byYeW7aUj/view?usp=sharing)
-
-## Video Walkthrough of the codebase
-[YouTube Link to Codebase Explanation (1-5 mins)](https://drive.google.com/file/d/15FHqQjZ-Jlb4ECNNo9rd-j7byYeW7aUj/view?usp=sharing)
-
 ## Features
-- User and Vendor SignUp/Login using local storage
-- Vendor dashboard to manage products (Add/Edit/Delete)
-- Product listing with filtering by category, price, and rating
-- Cart functionality with item count
-- Responsive design with sticky navbar and pagination
-- Checkout page to collect address and payment details
+- **User and Vendor SignUp/Login** (AhmadHassanX)
+- **Vendor dashboard** to manage products (AhmadHassanX)
+- **Cart functionality** with item count (NasirXAli)
+- **Checkout page** to collect address/payment (NasirXAli)
+- Product listing with filtering
 - Real-time product and cart data stored in Firebase Realtime Database
-- **Centralized Configuration**: Easy database switching via `src/config.js`
 - **Database Seeding**: PowerShell script to populate dummy data
 
-## Design Decisions or Assumptions
-- Firebase Realtime Database was chosen for simplicity and real-time capabilities
-- Local storage used for authentication instead of Firebase Auth
-- Role-based navigation: vendors access dashboard, users browse and shop
-- Minimal and user-friendly UI focused on functionality
-
 ## Installation & Getting started
-Clone the repository and run using any local live server extension:
+Clone the repository:
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/AhmadHassanX/Apna-Bazaar-.git
 cd Ecommerce_Web
 # Open index.html using Live Server
 ```
 
-## Configuration
-To change the Firebase Database URL:
-1. Open `src/config.js`.
-2. Update the `API_URL` variable with your new Firebase URL.
-
-## Database Seeding
-To populate the database with dummy products:
-1. Ensure you have PowerShell installed.
-2. Run the seeding script:
-```bash
-powershell -ExecutionPolicy Bypass -File seed.ps1
-```
-
-## Usage
-1. Go to Signup page and register as User or Vendor
-2. Login to get redirected based on your role
-3. Browse products, add to cart
-4. Checkout and fill your details to complete the order
-
 ## Credentials
-Vendor:
-- Name: Nasir Ali
+**Vendor:**
 - Email: nasirali@gmail.com
 - Password: vendor123
 
-User:
+**User:**
 - Email: user@gmail.com
 - Password: user123
-
-## APIs Used
-- Firebase Realtime Database
-
-## API Endpoints
-- `https://apna-bazaar-84ee4-default-rtdb.firebaseio.com/Product.json` - Products API
-- `https://apna-bazaar-84ee4-default-rtdb.firebaseio.com/Cart.json` - Cart API
 
 ## Technology Stack
 - HTML, CSS, JavaScript
 - Firebase Realtime Database
 - Local Storage (for authentication)
-- Netlify (Deployment)
-- GitHub (Version Control)
-
-## Collaboration & Timeline
-- This project was completed in 4 days.
-- Tools used: GitHub (version control & collaboration), Zoom (video presentation)
+- GitHub (Version Control for Collaboration)
 
 ---
-> Built by Sachin Kumanache
+> **Result of a Pair Programming Collaboration**
