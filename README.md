@@ -1,90 +1,82 @@
-# Apna Bazaar – The Ultimate E-Commerce Platform
+# Apna Bazaar – Multi-Vendor E-Commerce Platform
 
 ## 📌 Project Overview
-**Apna Bazaar** is a comprehensive e-commerce solution that demonstrates full-stack development capabilities. This repository houses three distinct implementations of the platform, showcasing evolution from vanilla web technologies to modern frameworks.
+**Apna Bazaar** is a full-stack e-commerce application designed to simulate a real-world shopping environment. This project features a dual-interface system for Vendors and Customers, powered by a robust **MySQL database** (hosted via XAMPP) and a **Node.js/Express** backend.
 
-### 🚀 1. Main Application (Deployed)
-**Tech Stack:** `HTML5`, `CSS3`, `Vanilla JavaScript`, `Firebase Realtime Database`
-**Status:** **Fully Functional & Deployed**
-The core application currently served via `index.html`. It connects directly to a live Firebase database for real-time operations.
-
-#### **Key Features & Contributors**
-*   **Authentication & Vendor Portal** (Developed by **Ahmad Hassan / AhmadHassanX**)
-    *   **Role-Based Access**: Distinct flows for `User` and `Vendor`.
-    *   **Secure Login/Signup**: Session management via LocalStorage.
-    *   **Vendor Dashboard**: Dedicated interface for vendors to Add, Edit, and Delete products (`vendersDashboard.html`).
-*   **Shopping Experience** (Developed by **Nasir Ali / NasirXAli**)
-    *   **Dynamic Cart**: Real-time addition/removal of items linked to user accounts (`cart.html`).
-    *   **Checkout System**: Streamlined process for address and payment collection (`checkout.html`).
-    *   **Smart Storefront**: Advanced filtering by Category, Price Range (`100-500`, etc.), and Rating.
-    *   **Pagination**: Optimized product loading strategy.
-
-### 💻 2. React Application (Modern V2)
-**Location:** `/react-app`
-**Tech Stack:** `React 19`, `Vite`, `Framer Motion`, `React Router v7`
-A modern, component-based rewrite of the frontend focusing on performance and animations.
-*   **Animations**: Powered by `framer-motion` for smooth UI transitions.
-*   **Routing**: Client-side routing using `react-router-dom`.
-
-### 🛠 3. Backend Service (SQL Alternative)
-**Location:** `/backend`
-**Tech Stack:** `Node.js`, `Express.js`, `MySQL`
-A robust REST API designed to replace the Firebase backend for enterprise-grade data management.
-*   **API Endpoints**:
-    *   `GET /api/products` - SQL-based product retrieval.
-    *   `POST /api/auth/signup` - Secure user registration.
-    *   `POST /api/cart` - Server-side cart management.
+### 🏛 Architecture
+The application is built using a classic 3-tier architecture:
+1.  **Frontend**: HTML5, CSS3, Vanilla JavaScript (Client-side logic).
+2.  **Backend API**: Node.js & Express.js (RESTful API).
+3.  **Database**: MySQL (Managed via XAMPP/phpMyAdmin).
 
 ---
 
-## 📂 Repository Structure
-```
-Ecommerce Web/
-├── index.html              # Main Entry Point (Vanilla App)
-├── pages/                  # Frontend Views
-│   ├── cart.html           # 🛒 Cart View
-│   ├── checkout.html       # 💳 Checkout View
-│   ├── log.html            # 🔑 Login View
-│   ├── signup.html         # 📝 Registration View
-│   └── vendersDashboard.html # 📊 Vendor Admin Panel
-├── src/                    # Application Logic
-│   ├── config.js           # API Configuration
-│   ├── index.js            # Main Product Logic (Firebase Connected)
-│   ├── cart.js             # Cart Managment Logic
-│   └── venders.js          # Vendor Dashboard Logic
-├── style/                  # CSS Stylesheets
-├── react-app/              # ⚛️ React Version (Vite)
-├── backend/                # 🔙 Node.js/Express API
-└── README.md               # Project Documentation
-```
+## 👥 Team & Contributions
+This project is a collaborative effort between two developers:
 
-## ⚙️ Setup Instructions
+*   **Ahmad Hassan (AhmadHassanX)** - *Partner A*
+    *   **Focus**: Vendor & User Management
+    *   **Key Contributions**:
+        *   Secure Authentication System (Login/Signup).
+        *   Vendor Dashboard for CRUD operations (Add/Update/Delete Products).
+        *   Backend API routes for Auth and Products.
 
-### For the Main App (Vanilla JS):
-1.  **Clone the Repo:**
+*   **Nasir Ali (NasirXAli)** - *Partner B*
+    *   **Focus**: Shopping Experience & Transaction
+    *   **Key Contributions**:
+        *   Shopping Cart module (Add/Remove items, Real-time calculations).
+        *   Checkout & Payment Interface.
+        *   Frontend Integration with Cart API.
+
+---
+
+## � Features
+- **Role-Based Access**: Specialized views for Customers vs. Vendors.
+- **Dynamic Product Management**: Vendors can manage inventory directly through the dashboard.
+- **Smart Shopping Cart**: Persists items and calculates totals dynamically.
+- **Advanced Search & Filter**: Filter products by Category, Price Range, and Star Rating.
+- **Secure Data Storage**: All user and product data is stored in a relational MySQL database.
+
+---
+
+## 🛠 Technology Stack
+*   **Frontend**: HTML, CSS, JavaScript
+*   **Backend**: Node.js, Express.js
+*   **Database**: MySQL (XAMPP)
+*   **Version Control**: Git & GitHub
+
+---
+
+## ⚙️ Installation & Setup
+
+### Prerequisites
+1.  **XAMPP** Installed (for MySQL Database).
+2.  **Node.js** Installed.
+
+### Step 1: Database Setup
+1.  Open **XAMPP Control Panel** and start **Apache** and **MySQL**.
+2.  Go to `http://localhost/phpmyadmin`.
+3.  Create a new database named `ecommerce_db`.
+4.  Import the provided SQL schema (if available) or run the migration script.
+
+### Step 2: Backend Setup
+1.  Navigate to the backend folder:
     ```bash
-    git clone https://github.com/AhmadHassanX/Apna-Bazaar-.git
+    cd backend
     ```
-2.  **Run:** Open `index.html` in your browser (Live Server recommended).
-3.  **Credentials:**
-    *   **User:** `user@gmail.com` / `user123`
-    *   **Vendor:** `nasirali@gmail.com` / `vendor123`
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+3.  Start the server:
+    ```bash
+    node server.js
+    ```
+    *(Server runs on http://localhost:3000)*
 
-### For the React App:
-```bash
-cd react-app
-npm install
-npm run dev
-```
-
-### For the Backend API:
-```bash
-cd backend
-npm install
-node server.js
-```
+### Step 3: Run the Application
+1.  Go back to the root folder.
+2.  Open `index.html` using a Live Server or directly in your browser.
 
 ---
 > **Collaboration Project**
-> *   **Partner A (AhmadHassanX)**: Auth, Vendor System, Core Structure
-> *   **Partner B (NasirXAli)**: Cart, Checkout, UI/UX Enhancements
