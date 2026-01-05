@@ -1,86 +1,90 @@
-# Apna Bazaar – Multi-Vendor E-Commerce App
+# Apna Bazaar – The Ultimate E-Commerce Platform
 
-## Introduction
-Apna Bazaar is a fully functional e-commerce web application designed for both vendors and customers. It allows vendors to manage product listings and customers to browse, filter, and purchase products. This project simulates the end-to-end shopping experience from signup/login to checkout. Built with a clean UI and interactive features, the application demonstrates key front-end development concepts and integrates Firebase Realtime Database for backend services. User authentication and session management are handled using local storage.
+## 📌 Project Overview
+**Apna Bazaar** is a comprehensive e-commerce solution that demonstrates full-stack development capabilities. This repository houses three distinct implementations of the platform, showcasing evolution from vanilla web technologies to modern frameworks.
 
-## Project Type
-Frontend & Backend (Collaboration)
+### 🚀 1. Main Application (Deployed)
+**Tech Stack:** `HTML5`, `CSS3`, `Vanilla JavaScript`, `Firebase Realtime Database`
+**Status:** **Fully Functional & Deployed**
+The core application currently served via `index.html`. It connects directly to a live Firebase database for real-time operations.
 
-## Deployed App
-Frontend: https://charming-moonbeam-632fe7.netlify.app/
+#### **Key Features & Contributors**
+*   **Authentication & Vendor Portal** (Developed by **Ahmad Hassan / AhmadHassanX**)
+    *   **Role-Based Access**: Distinct flows for `User` and `Vendor`.
+    *   **Secure Login/Signup**: Session management via LocalStorage.
+    *   **Vendor Dashboard**: Dedicated interface for vendors to Add, Edit, and Delete products (`vendersDashboard.html`).
+*   **Shopping Experience** (Developed by **Nasir Ali / NasirXAli**)
+    *   **Dynamic Cart**: Real-time addition/removal of items linked to user accounts (`cart.html`).
+    *   **Checkout System**: Streamlined process for address and payment collection (`checkout.html`).
+    *   **Smart Storefront**: Advanced filtering by Category, Price Range (`100-500`, etc.), and Rating.
+    *   **Pagination**: Optimized product loading strategy.
 
-## Team Members & Contributions
-This project was built collaboratively by:
+### 💻 2. React Application (Modern V2)
+**Location:** `/react-app`
+**Tech Stack:** `React 19`, `Vite`, `Framer Motion`, `React Router v7`
+A modern, component-based rewrite of the frontend focusing on performance and animations.
+*   **Animations**: Powered by `framer-motion` for smooth UI transitions.
+*   **Routing**: Client-side routing using `react-router-dom`.
 
-*   **Ahmad Hassan (AhmadHassanX)** - *Partner A*
-    *   **Role**: Vendor Management & Authentication
-    *   **Features**: User/Vendor Signup & Login, Vendor Dashboard (Add/Edit/Delete Products), Authentication Logic.
-
-*   **Nasir Ali (NasirXAli)** - *Partner B*
-    *   **Role**: Customer Experience & Shopping
-    *   **Features**: Product Cart Management, Checkout Process, Cart UI/UX, Order Summary.
-
-## Directory Structure
-```
-Ecommerce Web/
-├── pages/
-│   ├── cart.html          # (Partner B)
-│   ├── checkout.html      # (Partner B)
-│   ├── log.html           # (Partner A)
-│   ├── signup.html        # (Partner A)
-│   └── vendersDashboard.html # (Partner A)
-├── src/
-│   ├── cart.js            # (Partner B)
-│   ├── checkout.js        # (Partner B)
-│   ├── config.js
-│   ├── index.js
-│   ├── log.js             # (Partner A)
-│   ├── signup.js          # (Partner A)
-│   └── venders.js         # (Partner A)
-├── style/
-│   ├── cart.css           # (Partner B)
-│   ├── checkout.css       # (Partner B)
-│   ├── log.css            # (Partner A)
-│   ├── signup.css         # (Partner A)
-│   ├── style.css
-│   └── vendersDashboard.css # (Partner A)
-├── index.html
-├── README.md
-├── seed.ps1
-└── seed_data.json
-```
-
-## Features
-- **User and Vendor SignUp/Login** (AhmadHassanX)
-- **Vendor dashboard** to manage products (AhmadHassanX)
-- **Cart functionality** with item count (NasirXAli)
-- **Checkout page** to collect address/payment (NasirXAli)
-- Product listing with filtering
-- Real-time product and cart data stored in Firebase Realtime Database
-- **Database Seeding**: PowerShell script to populate dummy data
-
-## Installation & Getting started
-Clone the repository:
-```bash
-git clone https://github.com/AhmadHassanX/Apna-Bazaar-.git
-cd Ecommerce_Web
-# Open index.html using Live Server
-```
-
-## Credentials
-**Vendor:**
-- Email: nasirali@gmail.com
-- Password: vendor123
-
-**User:**
-- Email: user@gmail.com
-- Password: user123
-
-## Technology Stack
-- HTML, CSS, JavaScript
-- Firebase Realtime Database
-- Local Storage (for authentication)
-- GitHub (Version Control for Collaboration)
+### 🛠 3. Backend Service (SQL Alternative)
+**Location:** `/backend`
+**Tech Stack:** `Node.js`, `Express.js`, `MySQL`
+A robust REST API designed to replace the Firebase backend for enterprise-grade data management.
+*   **API Endpoints**:
+    *   `GET /api/products` - SQL-based product retrieval.
+    *   `POST /api/auth/signup` - Secure user registration.
+    *   `POST /api/cart` - Server-side cart management.
 
 ---
-> **Result of a Pair Programming Collaboration**
+
+## 📂 Repository Structure
+```
+Ecommerce Web/
+├── index.html              # Main Entry Point (Vanilla App)
+├── pages/                  # Frontend Views
+│   ├── cart.html           # 🛒 Cart View
+│   ├── checkout.html       # 💳 Checkout View
+│   ├── log.html            # 🔑 Login View
+│   ├── signup.html         # 📝 Registration View
+│   └── vendersDashboard.html # 📊 Vendor Admin Panel
+├── src/                    # Application Logic
+│   ├── config.js           # API Configuration
+│   ├── index.js            # Main Product Logic (Firebase Connected)
+│   ├── cart.js             # Cart Managment Logic
+│   └── venders.js          # Vendor Dashboard Logic
+├── style/                  # CSS Stylesheets
+├── react-app/              # ⚛️ React Version (Vite)
+├── backend/                # 🔙 Node.js/Express API
+└── README.md               # Project Documentation
+```
+
+## ⚙️ Setup Instructions
+
+### For the Main App (Vanilla JS):
+1.  **Clone the Repo:**
+    ```bash
+    git clone https://github.com/AhmadHassanX/Apna-Bazaar-.git
+    ```
+2.  **Run:** Open `index.html` in your browser (Live Server recommended).
+3.  **Credentials:**
+    *   **User:** `user@gmail.com` / `user123`
+    *   **Vendor:** `nasirali@gmail.com` / `vendor123`
+
+### For the React App:
+```bash
+cd react-app
+npm install
+npm run dev
+```
+
+### For the Backend API:
+```bash
+cd backend
+npm install
+node server.js
+```
+
+---
+> **Collaboration Project**
+> *   **Partner A (AhmadHassanX)**: Auth, Vendor System, Core Structure
+> *   **Partner B (NasirXAli)**: Cart, Checkout, UI/UX Enhancements
